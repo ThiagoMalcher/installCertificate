@@ -11,7 +11,7 @@ import java.io.OutputStream
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
 
-class helpers {
+class Helpers {
 
     fun getCertFilesInDownloads(): List<Pair<String, String>> {
         val certFiles = mutableListOf<Pair<String, String>>()
@@ -23,7 +23,7 @@ class helpers {
 
             for (file in filesInDownloads) {
                 if (file.isFile && file.name.endsWith(".cer", ignoreCase = true)) {
-                    certFiles.add(Pair(file.absolutePath, file.name))
+                    certFiles.add(Pair(file.absolutePath.replace(file.name, ""), file.name))
                 }
             }
         }
@@ -56,7 +56,7 @@ class helpers {
         var outputStream: OutputStream? = null
 
         try {
-            val certFolderPath = "cert"
+            val certFolderPath = "certs"
             val filesInAssets = assetManager.list(certFolderPath) ?: emptyArray()
 
             val downloadsDirectory =
