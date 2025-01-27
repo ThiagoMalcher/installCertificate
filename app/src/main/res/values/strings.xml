@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">installcertificate</string>
+    <string name="certificates_management">Gerenciamento de Certificados</string>
+    <string name="btn_install">Instalar</string>
+    <string name="btn_uninstall">Desinstalar</string>
+    <string name="log_process">Logs do Processo:</string>
+    <string name="log_not">Nenhum log disponível</string>
+    <string name="log_msg_install">Iniciando instalação...</string>
+    <string name="log_msg_install_success">Certificado instalado com sucesso.</string>
+    <string name="log_msg_uninstall">Iniciando desinstalação...</string>
+    <string name="log_msg_uninstall_success">Certificado desinstalado.</string>
+</resources>
